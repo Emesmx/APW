@@ -2,13 +2,36 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Moises Muñoz">
+        <meta name="author" content="Moisés Muñoz">
         <meta name="description" content="Clases de APW 2do curso - SMR">
         <title>Aprendiendo HTML5</title>
     </head>
     <body>
         <h1>Clases de APW 2do curso - SMR</h1>
         <h2>Formulario</h2>
+        <form action="#" method="post"> 
+           <label for="nombre">Dime tu nombre :</label>
+           <input type="text" id="nombre" name="nombre" required>
+          
+		<p>
+           <label  for="edad">Edad:</label>
+           <input type="number" id="edad" name="edad" min="17" max="65" requerid>
+           
+           <Label for="genero">Elige el genero:</Label>
+
+           <input type="radio" id="genero" name="numero" value="femenino"> Femenino
+           <input type="radio" id="genero" name="numero" value="masculino"> Masculino
+           <input type="radio" id="genero" name="numero" value="otro"> Otro
+			
+		<p>
+			        <label for="password">Contraseña:</label>
+			        <input type="password" id="contrasena" name="contrasena">
+			
+		<p>
+			        <button type="submit">Enviar</button> 
+
+      
+        </form>
         
     </body>
 </html>
