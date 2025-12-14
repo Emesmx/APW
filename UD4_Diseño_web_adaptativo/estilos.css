@@ -1,0 +1,79 @@
+/* Estilos base para el contenedor y apartados */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.apartado {
+    flex: 1 1 250px; /* Crecimiento, contracción, base */
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    min-height: 150px;
+    background-color: #f0f0f0; /* Color inicial para todas las cajas */
+}
+
+
+/* Resolución hasta 768px: cajas una debajo de otra */
+@media screen and (max-width: 768px) {
+    #contenedor {
+        flex-direction: column;
+    }
+    
+    .apartado {
+        flex: none; /* No flex en móvil para apilar completamente */
+        width: 100%;
+    }
+}
+
+/* Resolución hasta 992px (entre 769px y 992px): caja 1 arriba, 2 y 3 en paralelo, caja 4 abajo */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #contenedor {
+        flex-direction: column;
+    }
+    
+    /* Caja 1 (introduccion): arriba, ocupa todo */
+    #introduccion {
+        order: 1;
+        flex: 1 1 100%;
+        background-color: #ccc; /* Gris para caja 1 */
+    }
+    
+    /* Cajas 2 y 3 (adaptativo y responsive): en paralelo */
+    #adaptativo {
+        order: 2;
+        flex: 1 1 calc(50% - 10px); /* Mitad cada una menos gap */
+        background-color: #f0f0f0; /* Color inicial */
+    }
+    
+    #responsive {
+        order: 3;
+        flex: 1 1 calc(50% - 10px);
+        background-color: #f0f0f0; /* Color inicial */
+    }
+    
+    /* Caja 4 (conclusion): abajo, ocupa todo */
+    #conclusion {
+        order: 4;
+        flex: 1 1 100%;
+        background-color: #ccc; /* Gris para caja 4 */
+    }
+}
+
+/* Resoluciones mayores a 992px: cuatro cajas en paralelo con colores iniciales */
+@media screen and (min-width: 993px) {
+    #contenedor {
+        flex-direction: row;
+    }
+    
+    .apartado {
+        background-color: #f0f0f0; /* Restaurar colores iniciales */
+        flex: 1 1 22%; /* Cuatro en paralelo */
+    }
+    
+    #introduccion, #conclusion {
+        background-color: #f0f0f0 !important; /* Asegurar colores iniciales */
+    }
+}

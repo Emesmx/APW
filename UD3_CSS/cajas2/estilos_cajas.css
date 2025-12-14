@@ -1,0 +1,8 @@
+.caja {
+    margin: 30px 20% 0 20%;     /* superior 30px, izq/der 20%, inferior 0 */
+    padding: 10px;              /* 10px todos los lados */
+    border-top: 4px solid red;  /* superior rojo 4px sólido */
+    border-right: 6px solid blue; /* derecho azul 6px sólido */
+    border-bottom: 2px solid green; /* inferior verde 2px sólido */
+    background-color: yellow;   /* fondo amarillo */
+}

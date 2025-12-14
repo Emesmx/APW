@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+        <meta name="author" content="Moisés Muñoz">
+        <meta name="description" content="Clases de APW 2do curso - SMR">
+  <title>Ejercicio repaso Javascript</title>
+  <style>
+    #mensajes {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    #mensajes.error {
+      color: red;
+    }
+    #mensajes.success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<form id="formRegistro">
+  <label>
+    Nombre:
+    <input type="text" id="nombre">
+  </label>
+  <br>
+
+  <label>
+    Edad:
+    <input type="number" id="edad">
+  </label>
+  <br>
+
+  <label>
+    Email:
+    <input type="text" id="email">
+  </label>
+  <br>
+
+  <label>
+    Contraseña:
+    <input type="password" id="password">
+  </label>
+  <br>
+
+  <label>
+    Repetir contraseña:
+    <input type="password" id="repetirPassword">
+  </label>
+  <br>
+
+  <button type="button" onclick="validarFormulario()">Validar</button>
+</form>
+
+<div id="mensajes"></div>
+
+<script>
+
+  // Funciones de validación
+  function validarNombre(nombre) {
+    if (nombre.length >= 3) {
+      return true;
+    }
+    return false;
+  }
+
+  function validarEdad(edad) {
+    var num = Number(edad);
+    if (!isNaN(num) && num >= 18) {
+      return true;
+    }
+    return false;
+  }
+
+  function validarEmail(email) {
+    var posArroba = email.indexOf("@");
+    var posPunto = email.indexOf(".");
+    if (posArroba > 0 && posPunto > posArroba + 1) {
+      return true;
+    }
+    return false;
+  }
+
+  function validarPassword(password) {
+    if (password.length >= 6) {
+      return true;
+    }
+    return false;
+  }
+
+  function validarPasswordRepetida(password, repetirPassword) {
+    if (password === repetirPassword) {
+      return true;
+    }
+    return false;
+  }
+
+  // Función principal de validación
+  function validarFormulario() {
+    var nombre = document.getElementById("nombre").value.trim();
+    var edad = document.getElementById("edad").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value;
+    var repetirPassword = document.getElementById("repetirPassword").value;
+    var mensajesDiv = document.getElementById("mensajes");
+
+    var errores = [];
+
+    if (!validarNombre(nombre)) {
+      errores.push("El nombre debe tener al menos 3 caracteres.");
+    }
+    if (!validarEdad(edad)) {
+      errores.push("La edad debe ser un número y mayor o igual a 18.");
+    }
+    if (!validarEmail(email)) {
+      errores.push("El email debe contener un '@' y un '.' y '@' debe ir antes que '.'.");
+    }
+    if (!validarPassword(password)) {
+      errores.push("La contraseña debe tener al menos 6 caracteres.");
+    }
+    if (!validarPasswordRepetida(password, repetirPassword)) {
+      errores.push("Las contraseñas deben coincidir.");
+    }
+
+    if (errores.length === 0) {
+      mensajesDiv.className = "success";
+      mensajesDiv.innerHTML = "Formulario válido. Registro correcto.";
+    } else {
+      mensajesDiv.className = "error";
+      mensajesDiv.innerHTML = "Formulario NO válido.<br><ul><li>" + errores.join("</li><li>") + "</li></ul>";
+    }
+  }
+</script>
+
+</body>
+</html>

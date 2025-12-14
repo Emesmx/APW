@@ -1,0 +1,28 @@
+/* Primera caja: azul, borde gris, margen dcho e inferior */
+.caja1 {
+  background-color: blue;
+  border: 2px solid gray;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 100px;
+  float: left;
+}
+
+/* Segunda caja: amarilla, sin borde */
+.caja2 {
+  background-color: #ffff99;
+  width: 20%;
+  height: 50px;
+  float: left;
+}
+
+/* Tercera caja: roja, borde doble negro, clear para empezar en la izquierda */
+.caja3 {
+  background-color: #ff9999;
+  border: 1px double black;
+  width: 20%;
+  height: 50px;
+  float: left;
+  clear: left;
+}

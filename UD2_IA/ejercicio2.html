@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2: Validación de código - 2º SMR</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Validación de código con IA</h1>
+    <hr>
+
+    <h2>HTML con ERRORES intencionados ❌</h2>
+    <p>Aquí tienes un código HTML con errores típicos:</p>
+    
+    <pre style="background: #f5f5f5; padding: 15px; border-left: 4px solid #ccc;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bienvenido&lt;/h1&gt;
+    &lt;p&gt;Este párrafo &lt;b&gt;está mal cerrado
+    &lt;ul&gt;
+        &lt;li&gt;Primer elemento&lt;/li&gt;
+    &lt;/li&gt;  &lt;!-- Error: li mal cerrado --&gt;
+    &lt;img src="imagen.jpg"&gt;  &lt;!-- Falta alt --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>Errores detectados por IA 🔍</h2>
+    <ul>
+        <li><strong>&lt;p&gt; sin cerrar:</strong> Falta &lt;/p&gt; después de &lt;b&gt;</li>
+        <li><strong>&lt;li&gt; mal cerrado:</strong> Hay &lt;/li&gt; de más fuera de lugar</li>
+        <li><strong>&lt;img&gt; sin alt:</strong> Obligatorio para accesibilidad</li>
+        <li><strong>Etiqueta &lt;b&gt; sin cerrar:</strong> Dentro del párrafo</li>
+    </ul>
+
+    <h2>HTML CORREGIDO ✅</h2>
+    <pre style="background: #e8f5e8; padding: 15px; border-left: 4px solid #4CAF50;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bienvenido&lt;/h1&gt;
+    &lt;p&gt;Este párrafo &lt;b&gt;está bien cerrado&lt;/b&gt;&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Primer elemento&lt;/li&gt;
+        &lt;li&gt;Segundo elemento&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <p><strong>Próximo paso:</strong> Copia el código corregido y valídalo en <a href="https://validator.w3.org/" target="_blank">W3C Validator</a></p>
+
+    <hr>
+    <p><a href="index.html">← Volver al índice</a></p>
+</body>
+</html>

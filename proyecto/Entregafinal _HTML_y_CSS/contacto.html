@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../images/icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="author" content="Moises Muñoz">
+    <meta name="description" content="presentación personal - SMR">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <p>Formación en hardware, redes y sistemas operativos</p>
+    
+   <nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        <li><a href="datos.html">Datos</a></li>
+        <li><a href="boceto.html">Boceto</a></li>
+    </ul>
+</nav>
+</header>
+    <main>
+        <section>
+    <h2>Formulario de contacto</h2>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos de contacto</legend>
+
+            <p></p><label for="nombre">Nombre:</label>
+            <input type="text"
+                   id="nombre"
+                   name="nombre"
+                   required
+                   pattern=".{2,50}"></p>
+            
+            <p><label for="email">Email:</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   required></p>
+
+            <p><label for="asunto">Asunto:</label>
+            <input type="text"
+                   id="asunto"
+                   name="asunto"
+                   required
+                   maxlength="100"></p>
+
+            <label for="mensaje">Mensaje:</label>
+            <p><textarea id="mensaje"
+                      name="mensaje"
+                      rows="5"
+                      required
+                      maxlength="500"></textarea></p>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</section>
+
+        <section>
+      <h2>IES Doctor Luis Simarro</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d753.2432640057315!2d-0.535364555237202!3d38.9865676382753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61a201e7d1eb61%3A0xf0250efa87a28639!2sIES%20Doctor%20Luis%20Simarro!5e0!3m2!1ses!2ses!4v1760576155495!5m2!1ses!2ses" 
+				width="400" height="300" style="border:0;" 
+				allowfullscreen="" loading="lazy" 
+				referrerpolicy="no-referrer-when-downgrade">
+	  </iframe>
+		
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moisés Muñoz. 2-SMX APW</p>
+    </footer>
+</body>
+</html>

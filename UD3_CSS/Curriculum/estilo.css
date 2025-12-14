@@ -1,0 +1,44 @@
+body{
+    background-color: #b6eef0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+/* Título principal (h1) */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    color: rgb(223, 16, 30);
+}
+
+/* Títulos secundarios (h2) */
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    color: rgb(135, 16, 125, 0.589);
+}
+
+/* Títulos de tercer nivel (h3) */
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    color: rgb(10, 63, 239);
+}
+
+/* Negritas */
+p strong{
+    color: darkgreen;
+}
+
+/* Cursivas */
+em, i {
+    font-style: italic;
+    }
+
+/* Párrafos */
+p {
+    text-align: justify;
+    line-height: 1.2;
+}
+
