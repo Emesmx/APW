@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Ejercicios pre examen</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios pre examen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <h2>Validar campo texto</h2>
-        
-        <label>
-            Nombre:
-            <input type="text" id="nombre">
-        </label>    
-        <button id="btnComprobar"> Comrpbar si vacio</button>
-        
-        <p id="mensaje"></p>
+<body>
+    <h2>Validar campo texto</h2>
+    
+    <label>
+        Nombre:
+        <input type="text" id="nombre">
+    </label>    
+    <button id="btnComprobar">Comprobar si vacío</button>
+    
+    <p id="mensaje"></p>
 
-        <script>
-            const nombre = document.getElementById("nombre");
-            const btnComprobar = document.getElementById("tbnComprobar");
-            const mensaje = document.getElementById("mensaje");
+    <script>
+        const nombre = document.getElementById("nombre");
+        const btnComprobar = document.getElementById("btnComprobar");
+        const mensaje = document.getElementById("mensaje");
 
-            btnComprobar.addEventListener("click", function(){
-                mensaje.classList.remove("valido", "no_valido")
-                const texto = nombre.value.trim(); 
-                if (texto.leng < 3) {
-                    mensaje.textContent = "El campo esta vacio o tiene pocos caracteres.";
-                    mensaje.classList.add("no_valido")
-                }
-                else {
-                    mensaje.textContent = "Correcto";
-                    mensaje.classList.add("valido")
-                }
+        btnComprobar.addEventListener("click", function () {
+            mensaje.classList.remove("valido", "no_valido");
 
-            });
+            const texto = nombre.value.trim();
 
-        </script>
-    </body>
-
+            if (texto.length < 3) {
+                mensaje.textContent = "El campo está vacío o tiene pocos caracteres.";
+                mensaje.classList.add("no_valido");
+            } else {
+                mensaje.textContent = "Correcto";
+                mensaje.classList.add("valido");
+            }
+        });
+    </script>
+</body>
 </html>
