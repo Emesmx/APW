@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <metacharset="utf-8">
-        <title>Ejercicios pre examen</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios pre examen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <h1>Ejercicio 3 - Contador de caracteres</h1>
+<body>
+    <h1>Ejercicio 3 - Contador de caracteres</h1>
 
-        <textarea id="texto" rows="5" cols="40"
-            placeholder="Escribe algo (max recomendado: 100 caracteres)"></textarea>
-        <p> caracteres: <span id="contador" class="normal"> 0 </span></p>
+    <textarea id="texto" rows="5" cols="40"
+        placeholder="Escribe algo (max recomendado: 100 caracteres)"></textarea>
+
+    <p>Caracteres: <span id="contador" class="normal">0</span></p>
     
-        <script>
-            // 1. Captura textarea y contador
-                const texto = document.getElementById("texto");
-                const contador = document.getElementById("contador");
+    <script>
+        const texto = document.getElementById("texto");
+        const contador = document.getElementById("contador");
 
-             // 2. Añade evento 'input' al textarea    
-                texto.addEventListener("input", function(){
-                     // 3. Actualiza el número de caracteres (texto.value.length)
-                     const longitud = texto.value.length;
-                     contador.textContent = longitud;
-                     contador.classList.remove("rojo", "normal");
+        texto.addEventListener("input", function () {
+            const longitud = texto.value.length;
+            contador.textContent = longitud;
 
-            // 4. Si > 100 => clase 'rojo', si no => clase 'normal' 
-            
-            if(longitud > 100){
+            contador.classList.remove("rojo", "normal");
+
+            if (longitud > 100) {
                 contador.classList.add("rojo");
             } else {
                 contador.classList.add("normal");
-
             }
-
-
-                });
-           
-           
-            
-        </script>
-    </body>
-
+        });
+    </script>
+</body>
 </html>
