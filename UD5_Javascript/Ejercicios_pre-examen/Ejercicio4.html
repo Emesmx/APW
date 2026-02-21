@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <metacharset="utf-8">
-        <title>Ejercicios pre examen</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios pre examen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <h1>Ejercicio 4 - Modo oscuro / modo claro</h1>
+<body>
+    <h1>Ejercicio 4 - Modo oscuro / modo claro</h1>
 
-        <input type="checkbox" id="check"> Activar modo oscuro
+    <input type="checkbox" id="check"> Activar modo oscuro
 
-        <p id="texto"> Este texto cambiará cuando activemos el Modo Oscuro</p>
+    <p id="texto">Este texto cambiará cuando activemos el Modo Oscuro</p>
 
-        <script>
-            // 1. Captura checkbox document.body
-            // 2. Al 
-            const check = document.getElementById("check");
-            const body = docuement.body;
+    <script>
+        const check = document.getElementById("check");
+        const body = document.body;
 
-            
-            check.addEventListener("click", function())
-                const colorSeleccionado = select.value;
-                
-        </script>
-    </body>
+        check.addEventListener("change", function () {
 
+            if (check.checked) {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+            } else {
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+            }
+
+        });
+    </script>
+</body>
 </html>
