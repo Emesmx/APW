@@ -1,0 +1,22 @@
+.valido{
+    color:green;
+    font-weight: bold;  
+}
+
+.no_valido{
+    color:red;
+    font-weight: bold;
+
+}
+
+#contador{
+    font-weight: bold;
+}
+
+    .rojo{
+    color: red;
+    }
+    
+    .normal{
+    color:black
+    }
